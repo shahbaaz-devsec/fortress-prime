@@ -1,0 +1,32 @@
+name: Fortress Prime CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  basic-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify Python Version
+        run: python --version
+
+      - name: Check Script Syntax
+        run: python -m py_compile fortress_prime.py
+
+      - name: Verify File Exists
+        run: test -f fortress_prime.py
