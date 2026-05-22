@@ -1,21 +1,4 @@
 #!/bin/bash
-# =============================================================================
-# FORTRESS PRIME — Dry‑Run Smoke Test (Root Required)
-# =============================================================================
-# This script runs the hardening tool in --dry-run mode as root.
-# It validates that:
-#   1. The Python syntax is correct
-#   2. All 55 steps are registered and printed
-#   3. The tool exits successfully
-#
-# Usage (requires sudo):
-#   sudo bash tests/test_dry_run.sh
-#
-# Exit codes:
-#   0 = success
-#   1 = failure
-# =============================================================================
-
 set -euo pipefail
 
 TOOL="./fortress_prime.py"
