@@ -12,7 +12,7 @@
 #   sudo bash tests/test_dry_run.sh
 #
 # Exit codes:
-#   0 = success (tool runs without error in dry‑run mode)
+#   0 = success
 #   1 = failure
 # =============================================================================
 
@@ -24,17 +24,14 @@ echo "============================================="
 echo "  FORTRESS PRIME — Dry‑Run Smoke Test"
 echo "============================================="
 
-# Check Python syntax
 echo "[1/3] Checking Python syntax..."
 python3 -m py_compile "$TOOL"
 echo "      Syntax OK."
 
-# Check that --help works
 echo "[2/3] Checking --help..."
 python3 "$TOOL" --help > /dev/null
 echo "      --help OK."
 
-# Dry‑run with sudo (root required even for dry‑run)
 echo "[3/3] Running dry‑run (55 steps expected)..."
 OUTPUT=$(sudo python3 "$TOOL" --dry-run --non-interactive \
     --admin-user ci-test \
@@ -47,7 +44,6 @@ if [ $EXIT_CODE -ne 0 ]; then
     exit 1
 fi
 
-# Count how many steps were printed
 STEP_COUNT=$(echo "$OUTPUT" | grep -cE '^\[[0-9]+/[0-9]+\]' || true)
 
 echo ""
