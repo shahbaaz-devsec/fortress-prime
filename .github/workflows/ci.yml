@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-dryrun:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check Python syntax
+        run: python3 -m py_compile fortress_prime.py
+
+      - name: Verify --help works
+        run: python3 fortress_prime.py --help
+
+      - name: Verify --version works
+        run: python3 fortress_prime.py --version
+
+      - name: Dry‑run smoke test (no root)
+        run: python3 fortress_prime.py --dry-run --non-interactive --admin-user ci-test --ssh-port 2222
