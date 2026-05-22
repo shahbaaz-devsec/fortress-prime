@@ -3,19 +3,16 @@
 **55‑step, single‑file Python hardening script for Ubuntu Server.**  
 Aligns with **CIS Level 1 Server**, **DISA STIG‑style** settings, and **NIST SP 800‑53r5** controls.
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.1.2-green)](https://github.com/shahbaaz-devsec/fortress-prime/releases)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Platform](https://img.shields.io/badge/Platform-Ubuntu%2024.04-orange)
+![License](https://img.shields.io/badge/License-Apache%202.0-green)
+![Security](https://img.shields.io/badge/Security-Hardening-red)
 
-```
-███████╗ ██████╗ ██████╗ ████████╗██████╗ ███████╗███████╗███████╗
-██╔════╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗██╔════╝██╔════╝██╔════╝
-█████╗  ██║   ██║██████╔╝   ██║   ██████╔╝█████╗  ███████╗███████╗
-██╔══╝  ██║   ██║██╔══██╗   ██║   ██╔══██╗██╔══╝  ╚════██║╚════██║
-██║     ╚██████╔╝██║  ██║   ██║   ██║  ██║███████╗███████║███████║
-╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
-```
+<p align="center">
+  <img src="img/banner.png">
+</p>
 
-> **One command. 55 controls. Fully verified.**  
+**One command. 55 controls. Fully verified.**  
 
 ---
 
@@ -118,3 +115,21 @@ This project is licensed under the **Apache License 2.0** – see the [LICENSE](
 ## Acknowledgements
 
 FORTRESS PRIME builds on decades of public hardening knowledge from the **Center for Internet Security**, the **Defense Information Systems Agency**, **NIST**, and the countless open‑source maintainers who ship the tools this script configures.
+
+## Screenshots
+
+<p align="center">
+  <img src="img/1.png" width="90%">
+</p>
+
+<p align="center">
+  <img src="img/2.png" width="90%">
+</p>
+
+<p align="center">
+  <img src="img/3.png" width="90%">
+</p>
+
+<p align="center">
+  <img src="img/4.png" width="90%">
+</p>
